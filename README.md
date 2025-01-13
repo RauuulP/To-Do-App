@@ -16,7 +16,7 @@ Make sure you have Node.js and npm installed on your machine.
 ## Steps to run the application:
 
 Clone the repository:
-git clone https://github.com/your-username/todo-app.git
+git clone https://github.com/RauuulP/To-Do-App.git
 
 Navigate to the project directory:
 cd todo-app
