@@ -1,27 +1,34 @@
 # TodoApp
 
+A simple To-Do List application built with Angular. This app allows you to manage tasks, including adding, updating, deleting, and marking them as completed. When all tasks are completed, a "Congrats" message appears with a confetti animation to celebrate.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
 
-## Development server
+## Features
+Add tasks: Users can add new tasks to the list.
+Update tasks: Users can mark tasks as completed or incomplete.
+Delete tasks: Users can delete tasks from the list.
+Congrats message: Once all tasks are completed, a congratulatory message appears with a fun confetti animation.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation and Setup:
+Prerequisites:
+Make sure you have Node.js and npm installed on your machine.
 
-## Code scaffolding
+## Steps to run the application:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone the repository:
+git clone https://github.com/RauuulP/To-Do-App.git
 
-## Build
+Navigate to the project directory:
+cd todo-app
+Install dependencies:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run the following command to install all necessary dependencies:
+npm install
 
-## Running unit tests
+If you don't have canvas-confetti installed, install it using:
+npm install canvas-confetti
+Run the app:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Start the development server with:
+ng serve
+The application will be available at http://localhost:4200.
