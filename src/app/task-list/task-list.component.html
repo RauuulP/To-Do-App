@@ -3,26 +3,35 @@
 
   <div>
     @if(allTasksCompleted) {
-      <h2 class="hurray-message">Congrats! You have no tasks left! 🥳 </h2>
+    <h2 class="hurray-message">Congrats! You have no tasks left! 🥳</h2>
     }
   </div>
-    <ul>
-      <div>
-        <ul>
-          @for (task of tasks; track task.id) {
-          <li>
-            <input
-              type="checkbox"
-              [checked]="task.completed"
-              (change)="updateTask(task.id)"
-            />
-            <span [ngClass]="{ completed: task.completed }">{{
-              task.name
-            }}</span>
-            <button (click)="deleteTask(task.id)">Delete</button>
-          </li>
-          }
-        </ul>
+
+  <div>
+    @if(showModal) {
+      <div class="modal-content">
+        <h3>Task Description</h3>
+        <p>{{ selectedTask?.description }}</p>
+        <button class="close-btn" (click)="closeModal()">Close</button>
       </div>
-    </ul>
+    }
+  </div>
+
+  <ul>
+    <div>
+      <ul>
+        @for (task of tasks; track task.id) {
+        <li (click)="openTaskDescription(task)">
+          <input
+            type="checkbox"
+            [checked]="task.completed"
+            (change)="updateTask(task.id)"
+          />
+          <span [ngClass]="{ completed: task.completed }">{{ task.name }}</span>
+          <button (click)="deleteTask(task.id)">Delete</button>
+        </li>
+        }
+      </ul>
+    </div>
+  </ul>
 </div>

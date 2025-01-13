@@ -15,6 +15,9 @@ export class TaskListComponent implements OnInit {
 
   tasks: Task[] = [];
   allTasksCompleted: boolean = false;
+  showModal: boolean = false;
+  selectedTask: Task | null = null;
+
 
   constructor(private taskService: TaskService) {}
 
@@ -38,9 +41,25 @@ export class TaskListComponent implements OnInit {
   checkCompletedTasks(): void {
     this.allTasksCompleted = this.tasks.length === 0 || this.tasks.every(task => task.completed);
     if (this.allTasksCompleted) {
+      this.showModal = false;
       this.triggerConfetti()
     }
   }
+
+  openTaskDescription(task: Task): void{
+    this.selectedTask = task;
+    if (task.description) {
+      this.showModal = true;
+    } else {
+      alert("No description available for this task. Don't worry, you got this!")
+    }
+  }
+
+  closeModal(): void {
+    this.showModal = false;
+    this.selectedTask = null;
+  }
+
 
   triggerConfetti(): void {
     const duration = 5 * 1000; 
@@ -61,5 +80,4 @@ export class TaskListComponent implements OnInit {
       }
     })();
   }
-
 }
