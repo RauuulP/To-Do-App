@@ -4,10 +4,11 @@ A simple To-Do List application built with Angular. This app allows you to manag
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
 
 ## Features
-Add tasks: Users can add new tasks to the list.
-Update tasks: Users can mark tasks as completed or incomplete.
-Delete tasks: Users can delete tasks from the list.
-Congrats message: Once all tasks are completed, a congratulatory message appears with a fun confetti animation.
+**Add tasks**: Users can add new tasks to the list.
+**Update tasks**: Users can mark tasks as completed or incomplete.
+**Delete tasks**: Users can delete tasks from the list.
+**Congrats message**: Once all tasks are completed, a congratulatory message appears with a fun confetti animation.
+**Auto-hide modal**: The modal box is automatically closed when all tasks are marked as completed.
 
 ## Installation and Setup:
 Prerequisites:
@@ -15,20 +16,20 @@ Make sure you have Node.js and npm installed on your machine.
 
 ## Steps to run the application:
 
-Clone the repository:
+**Clone the repository**:
 git clone https://github.com/RauuulP/To-Do-App.git
 
-Navigate to the project directory:
+**Navigate to the project directory**:
 cd todo-app
 Install dependencies:
 
-Run the following command to install all necessary dependencies:
+**Run the following command to install all necessary dependencies**:
 npm install
 
-If you don't have canvas-confetti installed, install it using:
+**If you don't have canvas-confetti installed, install it using**:
 npm install canvas-confetti
 Run the app:
 
-Start the development server with:
+**Start the development server with**:
 ng serve
 The application will be available at http://localhost:4200.
