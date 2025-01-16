@@ -21,7 +21,6 @@ git clone https://github.com/RauuulP/To-Do-App.git
 
 **Navigate to the project directory**:
 cd todo-app
-Install dependencies:
 
 **Run the following command to install all necessary dependencies**:
 npm install
